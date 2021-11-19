@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <xacro:property name="PI" value="3.1415926535897931"/>
+
+  <!-- joint limits [rad], corresponds to 175, 170, 120 degrees-->
+  <xacro:property name="joint_limit_1" value="2.9670"/>
+  <xacro:property name="joint_limit_2" value="2.0944"/>
+  <xacro:property name="joint_limit_3" value="2.9670"/>
+  <xacro:property name="joint_limit_4" value="2.0944"/>
+  <xacro:property name="joint_limit_5" value="2.9670"/>
+  <xacro:property name="joint_limit_6" value="2.0944"/>
+  <xacro:property name="joint_limit_7" value="3.0543"/>
+  <!-- max torques per joint [Nm]-->
+  <xacro:property name="max_effort_1" value="320"/>
+  <xacro:property name="max_effort_2" value="320"/>
+  <xacro:property name="max_effort_3" value="176"/>
+  <xacro:property name="max_effort_4" value="176"/>
+  <xacro:property name="max_effort_5" value="110"/>
+  <xacro:property name="max_effort_6" value="40"/>
+  <xacro:property name="max_effort_7" value="40"/>
+  <!-- max velocities per joint [rad/s], corresponds to 75, 85, 100, 130, 135 deg/s-->
+  <xacro:property name="max_velocity_1" value="1.4835"/>
+  <xacro:property name="max_velocity_2" value="1.4835"/>
+  <xacro:property name="max_velocity_3" value="1.7453"/>
+  <xacro:property name="max_velocity_4" value="1.3090"/>
+  <xacro:property name="max_velocity_5" value="2.2689"/>
+  <xacro:property name="max_velocity_6" value="2.3562"/>
+  <xacro:property name="max_velocity_7" value="2.3562"/>
+
+</robot>
