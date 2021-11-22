@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<robot name="iiwa7" xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <xacro:arg name="robot" default="iiwa7"/>
+  <xacro:arg name="prefix" default="$(arg robot)_"/>
+  <xacro:arg name="robot_ip" default="192.170.10.1"/>
+  <xacro:arg name="load_ros2_control" default="false"/>
+  <xacro:arg name="use_sim" default="false"/>
+  <xacro:arg name="connected_to" default=""/>
+  <xacro:arg name="xyz" default="0 0 0"/>
+  <xacro:arg name="rpy" default="0 0 0"/>
+
+  <xacro:property name="robot" value="$(arg robot)"/>
+  <xacro:if value="${robot == 'iiwa7'}">
+    <xacro:include filename="$(find kuka_iiwa_description)/robots/iiwa7_limits.xacro"/>
+    <xacro:include filename="$(find kuka_iiwa_description)/robots/iiwa7.xacro"/>
+    <xacro:iiwa7 prefix="$(arg prefix)" connected_to="$(arg connected_to)" xyz="$(arg xyz)" rpy="$(arg rpy)"/>
+  </xacro:if>
+
+  <xacro:if value="${robot == 'iiwa14'}">
+    <xacro:include filename="$(find kuka_iiwa_description)/robots/iiwa14_limits.xacro"/>
+    <xacro:include filename="$(find kuka_iiwa_description)/robots/iiwa14.xacro"/>
+    <xacro:iiwa14 prefix="$(arg prefix)" connected_to="$(arg connected_to)" xyz="$(arg xyz)" rpy="$(arg rpy)"/>
+  </xacro:if>
+
+  <xacro:if value="$(arg load_ros2_control)">
+    <xacro:iiwa_interface name="IiwaInterface" prefix="$(arg prefix)" robot_ip="$(arg robot_ip)"
+                          use_sim="$(arg use_sim)"/>
+  </xacro:if>
+</robot>
