@@ -24,6 +24,7 @@
   </xacro:if>
 
   <xacro:if value="$(arg load_ros2_control)">
+    <xacro:include filename="$(find kuka_iiwa_description)/ros2_control/iiwa.ros2_control.xacro"/>
     <xacro:iiwa_interface name="IiwaInterface" prefix="$(arg prefix)" robot_ip="$(arg robot_ip)"
                           fri_port="${arg fri_port}" use_sim="$(arg use_sim)"/>
   </xacro:if>

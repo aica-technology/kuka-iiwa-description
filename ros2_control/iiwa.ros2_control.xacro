@@ -5,7 +5,7 @@
     <ros2_control name="${name}" type="system">
       <xacro:unless value="${use_sim}">
         <hardware>
-          <plugin>robot_interface/iiwa/IiwaInterface</plugin>
+          <plugin>robot_interface/kuka/IiwaInterface</plugin>
           <param name="robot_ip">${robot_ip}</param>
           <param name="fri_port">${fri_port}</param>
         </hardware>
