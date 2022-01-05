@@ -3,6 +3,7 @@
   <xacro:arg name="robot" default="iiwa7"/>
   <xacro:arg name="prefix" default="$(arg robot)_"/>
   <xacro:arg name="robot_ip" default="192.170.10.1"/>
+  <xacro:arg name="fri_port" default="30200"/>
   <xacro:arg name="load_ros2_control" default="false"/>
   <xacro:arg name="use_sim" default="false"/>
   <xacro:arg name="connected_to" default=""/>
@@ -24,6 +25,6 @@
 
   <xacro:if value="$(arg load_ros2_control)">
     <xacro:iiwa_interface name="IiwaInterface" prefix="$(arg prefix)" robot_ip="$(arg robot_ip)"
-                          use_sim="$(arg use_sim)"/>
+                          fri_port="${arg fri_port}" use_sim="$(arg use_sim)"/>
   </xacro:if>
 </robot>

@@ -1,12 +1,13 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
-  <xacro:macro name="iiwa_interface" params="name prefix robot_ip use_sim">
+  <xacro:macro name="iiwa_interface" params="name prefix robot_ip fri_port use_sim">
 
     <ros2_control name="${name}" type="system">
       <xacro:unless value="${use_sim}">
         <hardware>
           <plugin>robot_interface/iiwa/IiwaInterface</plugin>
           <param name="robot_ip">${robot_ip}</param>
+          <param name="fri_port">${fri_port}</param>
         </hardware>
       </xacro:unless>
 
