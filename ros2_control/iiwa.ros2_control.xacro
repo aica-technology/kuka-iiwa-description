@@ -31,7 +31,7 @@
       </joint>
       <joint name="${prefix}joint2">
         <command_interface name="position">
-          <param name="min">-${-joint_limit_2}</param>
+          <param name="min">${-joint_limit_2}</param>
           <param name="max">${joint_limit_2}</param>
         </command_interface>
         <command_interface name="velocity">
@@ -49,7 +49,7 @@
       </joint>
       <joint name="${prefix}joint3">
         <command_interface name="position">
-          <param name="min">-${-joint_limit_3}</param>
+          <param name="min">${-joint_limit_3}</param>
           <param name="max">${joint_limit_3}</param>
         </command_interface>
         <command_interface name="velocity">
@@ -67,7 +67,7 @@
       </joint>
       <joint name="${prefix}joint4">
         <command_interface name="position">
-          <param name="min">-${-joint_limit_4}</param>
+          <param name="min">${-joint_limit_4}</param>
           <param name="max">${joint_limit_4}</param>
         </command_interface>
         <command_interface name="velocity">
@@ -85,7 +85,7 @@
       </joint>
       <joint name="${prefix}joint5">
         <command_interface name="position">
-          <param name="min">-${-joint_limit_5}</param>
+          <param name="min">${-joint_limit_5}</param>
           <param name="max">${joint_limit_5}</param>
         </command_interface>
         <command_interface name="velocity">
@@ -103,7 +103,7 @@
       </joint>
       <joint name="${prefix}joint6">
         <command_interface name="position">
-          <param name="min">-${-joint_limit_6}</param>
+          <param name="min">${-joint_limit_6}</param>
           <param name="max">${joint_limit_6}</param>
         </command_interface>
         <command_interface name="velocity">
@@ -121,7 +121,7 @@
       </joint>
       <joint name="${prefix}joint7">
         <command_interface name="position">
-          <param name="min">-${-joint_limit_7}</param>
+          <param name="min">${-joint_limit_7}</param>
           <param name="max">${joint_limit_7}</param>
         </command_interface>
         <command_interface name="velocity">
