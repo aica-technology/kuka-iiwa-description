@@ -2,8 +2,9 @@
 <robot name="iiwa7" xmlns:xacro="http://www.ros.org/wiki/xacro">
   <xacro:arg name="robot" default="iiwa7"/>
   <xacro:arg name="prefix" default="$(arg robot)_"/>
-  <xacro:arg name="robot_ip" default="192.170.10.1"/>
-  <xacro:arg name="port" default="30200"/>
+  <xacro:arg name="robot_ip" default="127.0.0.1"/>
+  <xacro:arg name="robot_state_port" default="9701"/>
+  <xacro:arg name="robot_command_port" default="9702"/>
   <xacro:arg name="load_ros2_control" default="false"/>
   <xacro:arg name="use_sim" default="false"/>
   <xacro:arg name="connected_to" default=""/>
@@ -26,6 +27,7 @@
   <xacro:if value="$(arg load_ros2_control)">
     <xacro:include filename="$(find kuka_iiwa_description)/ros2_control/iiwa.ros2_control.xacro"/>
     <xacro:iiwa_interface name="IiwaInterface" prefix="$(arg prefix)" robot_ip="$(arg robot_ip)"
-                          port="$(arg port)" use_sim="$(arg use_sim)"/>
+                          robot_state_port="$(arg robot_state_port)" robot_command_port="$(arg robot_command_port)"
+                          use_sim="$(arg use_sim)"/>
   </xacro:if>
 </robot>
