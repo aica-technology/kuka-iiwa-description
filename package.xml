@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <package format="3">
   <name>kuka_iiwa_description</name>
-  <version>0.0.1</version>
+  <version>0.1.0</version>
   <description>Description package of the KUKA IIWA robots</description>
-  <maintainer email="dominic.reber@epfl.ch">Dominic Reber</maintainer>
-  <license>TODO</license>
+  <maintainer email="dominic@aica.tech">Dominic Reber</maintainer>
+  <license>GNU General Public License 3.0</license>
 
   <buildtool_depend>ament_cmake</buildtool_depend>
 
